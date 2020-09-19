@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainAnchor" maxHeight="600.0" maxWidth="709.0" minHeight="600.0" minWidth="709.0" prefHeight="600.0" prefWidth="709.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Pane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="380.0" style="-fx-background-color: #31455D; -fx-background-radius: 1.5em;">
+         <children>
+            <Pane depthTest="DISABLE" maxHeight="-Infinity" pickOnBounds="false" prefHeight="40.0" prefWidth="380.0" style="-fx-background-color: #e78e0b;">
+               <children>
+                  <JFXButton fx:id="playlistButton" onAction="#showList" onMouseReleased="#showList" prefHeight="40.0" prefWidth="40.0" text="≡" textFill="#632401">
+                     <font>
+                        <Font name="Corbel Light" size="21.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="minimizeButton" layoutX="305.0" onAction="#minimize" onMouseReleased="#minimize" prefHeight="40.0" prefWidth="40.0" text="-" textFill="#632401">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="closeButton" layoutX="340.0" onAction="#close" onMouseReleased="#close" prefHeight="40.0" prefWidth="40.0" text="X" textFill="#632401">
+                     <font>
+                        <Font name="Corbel Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXButton fx:id="playButton" layoutX="142.0" layoutY="447.0" onAction="#play" onMouseReleased="#play" prefHeight="43.0" prefWidth="97.0" text="▶" textFill="WHITE">
+               <font>
+                  <Font size="41.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="stopButton" layoutX="14.0" layoutY="508.0" onAction="#stop" onMouseReleased="#stop" prefHeight="40.0" prefWidth="0.0" text="■" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="prevButton" layoutX="87.0" layoutY="463.0" onAction="#prev_Song" text="&lt;&lt;" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="nextButton" layoutX="239.0" layoutY="464.0" onAction="#next_Song" text="&gt;&gt;" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="currentSong" alignment="CENTER" layoutX="34.0" layoutY="261.0" prefHeight="15.0" prefWidth="312.0" styleClass="label1" text="Now Playing: " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="volButton" layoutX="334.0" layoutY="531.0" prefHeight="20.0" prefWidth="20.0" styleClass="label_sound" stylesheets="@application.css" />
+            <JFXSlider fx:id="currentPlaytime" layoutX="10.0" layoutY="408.0" prefHeight="15.0" prefWidth="360.0" styleClass="currentTime" />
+            <JFXSlider fx:id="volSlider" layoutX="324.0" layoutY="434.0" orientation="VERTICAL" prefHeight="91.0" prefWidth="40.0" style="-fx-background-color: #31455D;" />
+            <JFXButton fx:id="pauseButton" layoutX="142.0" layoutY="448.0" onAction="#pause" onMouseReleased="#pause" prefHeight="43.0" prefWidth="97.0" text="II" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="41.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="showInfo" alignment="CENTER" layoutX="41.0" layoutY="290.0" prefHeight="97.0" prefWidth="300.0" style="-fx-background-color: #0D2E4B; -fx-background-radius: 20;" styleClass="label3" stylesheets="@application.css" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="70.0" prefHeight="164.0" prefWidth="164.0" styleClass="song_image" stylesheets="@application.css" />
+         </children>
+      </Pane>
+      <Pane fx:id="panePlaylist" layoutX="398.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="300.0" style="-fx-background-color: #31455D; -fx-background-radius: 1.5em;">
+         <children>
+            <Pane prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #e78e0b;">
+               <children>
+                  <MenuBar layoutX="221.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="32.0" style="-fx-background-radius: 40; -fx-background-color: #e78e0b;" styleClass="music_icon" stylesheets="@application.css">
+                     <menus>
+                        <Menu mnemonicParsing="false" style="-fx-opacity: 0;">
+                           <items>
+                              <MenuItem fx:id="menuOpenFile" mnemonicParsing="false" onAction="#openFile" text="Open File">
+                                 <graphic>
+                                    <Label prefHeight="40.0" prefWidth="40.0" styleClass="save_file" stylesheets="@application.css" textAlignment="CENTER" textFill="WHITE" />
+                                 </graphic>
+                              </MenuItem>
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="menuNewPlaylist" mnemonicParsing="false" onAction="#createPlaylist" text="New Playlist">
+                                 <graphic>
+                                    <Label prefHeight="40.0" prefWidth="40.0" styleClass="newPlaylist" stylesheets="@application.css" textFill="WHITE" />
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="menuOpenPlaylist" mnemonicParsing="false" onAction="#readplaylist1" text="Open Playlist">
+                                 <graphic>
+                                    <Label fx:id="create_playlist" prefHeight="40.0" prefWidth="40.0" styleClass="open_file" stylesheets="@application.css" textFill="WHITE" />
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="menuRemovePlaylist" mnemonicParsing="false" onAction="#removePlaylist" text="Remove Playlist">
+                                 <graphic>
+                                    <Label prefHeight="40.0" prefWidth="40.0" styleClass="remove_file" stylesheets="@application.css" textFill="WHITE" />
+                                 </graphic>
+                              </MenuItem>
+                              <SeparatorMenuItem mnemonicParsing="false" />
+                              <MenuItem fx:id="menuAddSong" mnemonicParsing="false" onAction="#filechoose" text="Add Song">
+                                 <graphic>
+                                    <Label prefHeight="40.0" prefWidth="40.0" styleClass="add_song" stylesheets="@application.css" textAlignment="CENTER" textFill="WHITE" />
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem fx:id="menuRemoveSong" mnemonicParsing="false" onAction="#fileRemove" text="Remove Song">
+                                 <graphic>
+                                    <Label prefHeight="40.0" prefWidth="40.0" styleClass="sub_files" stylesheets="@application.css" textAlignment="CENTER" textFill="WHITE" />
+                                 </graphic>
+                              </MenuItem>
+                           </items>
+                        </Menu>
+                     </menus>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </MenuBar>
+                  <JFXButton fx:id="playlistMinimize" layoutX="253.0" layoutY="1.0" onAction="#hideList" onMouseReleased="#hideList" prefHeight="40.0" prefWidth="47.0" text="🡄" textFill="#632401">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="playlistName" alignment="CENTER" layoutX="1.0" layoutY="-1.0" prefHeight="40.0" prefWidth="81.0" styleClass="label1" stylesheets="@application.css" text="Playlist" textAlignment="JUSTIFY" textFill="#632401">
+                     <font>
+                        <Font name="Verdana" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXListView fx:id="playlistView" layoutX="15.0" layoutY="86.0" onMouseClicked="#doubleClickMusic" prefHeight="250.0" prefWidth="270.0" styleClass="label2" />
+            <Label fx:id="playlistStatus" layoutX="15.0" layoutY="59.0" prefHeight="15.0" prefWidth="270.0" styleClass="label1" textFill="#797979">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

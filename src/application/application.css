@@ -1,0 +1,141 @@
+
+.jfx-slider > .thumb {
+     -fx-background-color: #e78e0b;
+}
+
+.jfx-slider > .colored-track {
+     -fx-background-color: #e78e0b;
+}
+
+.progress-bar > .bar {
+  -fx-control-inner-background: #e78e0b;
+}
+.menu-bar {
+    -fx-background-color:  #31455D;
+}
+
+.menu-bar .menu-button:hover, .menu-bar .menu-button:focused, .menu-bar .menu-button:showing {
+    -fx-background: -fx-accent;
+    -fx-background-color:  #31455D;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.currentTime >.thumb{
+    -fx-background-color: #e78e0b;
+   -fx-pref-height:0.0px;
+   -fx-pref-width:0.0px;
+}
+.root { 
+   -fx-background-color: transparent; 
+}
+
+.menu-item .label{
+    -fx-text-fill: black;
+}
+.menu-item:hover {
+    -fx-background-color: #FFAA00;
+}
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+}
+.menu-item {
+    -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-insets: 0.0, 1.0, 2.0;
+    -fx-background-radius: 0.0 6.0 6.0 6.0, 0.0 5.0 5.0 5.0, 0.0 4.0 4.0 4.0;
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
+}
+.pane {
+    -fx-background-insets: 0.0, 1.0, 2.0;
+    -fx-background-radius: 0.0 6.0 6.0 6.0, 0.0 5.0 5.0 5.0, 0.0 4.0 4.0 4.0;
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
+}
+
+.label1{
+    -fx-font-size: 13.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,20.0) , 0.0,0.0,0.0,1.0 );
+}
+.label3{
+    -fx-font-size: 13.0px;
+    -fx-font-weight: Bold Italic;
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,20.0) , 0.0,0.0,0.0,1.0 );
+}
+.label2{
+    -fx-font-size: 13.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,100.0) , 0.0,0.0,0.0,1.0 );
+}
+.song_image
+{
+ -fx-background-image:url("/resource/images.jpg");
+ -fx-background-size:100.0% 100.0%;
+}
+.add_song
+{
+ -fx-background-image:url("/resource/add_song.png");
+ -fx-background-size:100.0% 100.0%;
+}
+.open_file
+{
+ -fx-background-image:url("/resource/open_file.png");
+ -fx-background-size:100.0% 100.0%;
+}
+.menu_list
+{
+ -fx-background-image:url("/resource/music_list.png");
+ -fx-background-size:100.0% 100.0%;
+}
+.remove_file
+{
+ -fx-background-image:url("/resource/remove_list.png");
+ -fx-background-size:100.0% 100.0%;
+}
+.playlist_shape
+{
+ -fx-background-image:url("/resource/playlist_shape.jpg");
+ -fx-background-size:100.0% 100.0%;
+}
+.newPlaylist
+{
+ -fx-background-image:url("/resource/newPlaylist.png");
+ -fx-background-size:100.0% 100.0%;
+}
+.newPlaylist2
+{
+ -fx-background-image:url("/resource/now-play.svc");
+ -fx-background-size:100.0% 100.0%;
+}
+.save_file
+{
+ -fx-background-image:url("/resource/save_file.png");
+ -fx-background-size:100.0% 100.0%;
+}
+.music_icon
+{
+ -fx-background-image:url("/resource/music_icon.png");
+ -fx-background-size:100.0% 100.0%;
+ -fx-font-size: 13.0px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #CCCCCC;
+    -fx-effect: dropshadow( gaussian , rgba(255.0,255.0,255.0,20) , 0.0,0.0,0.0,1.0 );
+}
+
+.sub_files
+{
+ -fx-background-image:url("/resource/sub_files.png");
+ -fx-background-size:100.0% 100.0%;
+}
+
+.label_sound
+{
+   -fx-background-image:url("/resource/sound.png");
+   -fx-background-size:100.0% 100.0%;
+}
